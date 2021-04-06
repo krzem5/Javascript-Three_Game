@@ -455,8 +455,6 @@
 			}
 			function update_prev(){
 				if (PREV==null){return}
-				for (var c of sb_right.childNodes){
-				}
 				curr_sel.pos(parseInt(sb_right.querySelectorAll(".r-pos-x")[0].value),parseInt(sb_right.querySelectorAll(".r-pos-y")[0].value),parseInt(sb_right.querySelectorAll(".r-pos-z")[0].value))
 				curr_sel.rot(parseInt(sb_right.querySelectorAll(".r-rot-x")[0].value)*(Math.PI/180),parseInt(sb_right.querySelectorAll(".r-rot-y")[0].value)*(Math.PI/180),parseInt(sb_right.querySelectorAll(".r-rot-z")[0].value)*(Math.PI/180))
 				curr_sel.size(parseInt(sb_right.querySelectorAll(".r-size-x")[0].value),parseInt(sb_right.querySelectorAll(".r-size-y")[0].value),parseInt(sb_right.querySelectorAll(".r-size-z")[0].value))
@@ -480,7 +478,7 @@
 				PREV.box.size(sdt[0]/sc*125,sdt[1]/sc*125,sdt[2]/sc*125)
 				render()
 			}
-			function get_short(nm){ 
+			function get_short(nm){
 				var num="",n="0123456789".split("")
 				for (var ki=nm.length-1;ki>=0;ki--){
 					if (n.includes(nm[ki])){num=nm[ki]+num}
@@ -682,7 +680,7 @@
 				over.classList.add("v")
 				over.classList.add("gr")
 				over.querySelectorAll(".o-box2")[0].querySelectorAll(".o-text")[0].value=CGR.group
-				over.querySelectorAll(".o-box2")[0].querySelectorAll(".o-text")[0].onkeydown=set_group	
+				over.querySelectorAll(".o-box2")[0].querySelectorAll(".o-text")[0].onkeydown=set_group
 			}
 			function set_group(e){
 				if (e.keyCode!=13){return}
